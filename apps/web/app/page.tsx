@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { PraxisAnatomyRig } from "../components/Anatomy/PraxisAnatomyRig";
 import { AsciiHeroButton } from "../components/AsciiHeroButton";
 import { HeroAnimation } from "../components/HeroAnimation";
+import DeveloperCredits from "../components/DeveloperCredits";
 
 export default function Home() {
   const router = useRouter();
@@ -197,25 +198,80 @@ export default function Home() {
         </div>
       </section>
 
+     
       {/* Footer CTA */}
-      <section style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "80px 24px 120px", background: "#000" }}>
-        <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
-          <div style={{ maxWidth: 700, margin: "0 auto", padding: 48, border: "1px solid #333", background: "#050505" }}>
-            <h2 style={{ fontSize: 24, fontWeight: 900, margin: "0 0 16px", textTransform: "uppercase" }}>Ready to prove yourself?</h2>
-            <p style={{ color: "#666", margin: "0 0 32px", fontSize: 14 }}>No resume padding. No whiteboard theater. Just solve.</p>
+      <section
+        style={{
+          position: "relative",
+          zIndex: 1,
+          textAlign: "center",
+          padding: "80px 24px 120px",
+          background: "#000",
+        }}
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+        >
+          <div
+            style={{
+              maxWidth: 700,
+              margin: "0 auto",
+              padding: 48,
+              border: "1px solid #333",
+              background: "#050505",
+            }}
+          >
+            <h2
+              style={{
+                fontSize: 24,
+                fontWeight: 900,
+                margin: "0 0 16px",
+                textTransform: "uppercase",
+              }}
+            >
+              Ready to prove yourself?
+            </h2>
+
+            <p style={{ color: "#666", margin: "0 0 32px", fontSize: 14 }}>
+              No resume padding. No whiteboard theater. Just solve.
+            </p>
+
             <div style={{ display: "flex", gap: 16, justifyContent: "center" }}>
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => router.push("/seeker/onboarding")}
-                style={{ padding: "16px 40px", fontSize: 14, fontWeight: 700, color: "#000", background: "#00ff41", border: "none", cursor: "pointer", textTransform: "uppercase", letterSpacing: "1px" }}
+                style={{
+                  padding: "16px 40px",
+                  fontSize: 14,
+                  fontWeight: 700,
+                  color: "#000",
+                  background: "#00ff41",
+                  border: "none",
+                  cursor: "pointer",
+                  textTransform: "uppercase",
+                  letterSpacing: "1px",
+                }}
               >
                 [ START_AS_SEEKER ]
               </motion.button>
+
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 onClick={() => router.push("/login")}
-                style={{ padding: "16px 40px", fontSize: 14, fontWeight: 500, color: "#888", background: "transparent", border: "1px solid #333", cursor: "pointer", textTransform: "uppercase", letterSpacing: "1px" }}
+                style={{
+                  padding: "16px 40px",
+                  fontSize: 14,
+                  fontWeight: 500,
+                  color: "#888",
+                  background: "transparent",
+                  border: "1px solid #333",
+                  cursor: "pointer",
+                  textTransform: "uppercase",
+                  letterSpacing: "1px",
+                }}
               >
                 [ COMPANY_LOGIN ]
               </motion.button>
@@ -223,11 +279,14 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      {/* Developer Credits */}
+      <DeveloperCredits />
+
           </motion.div>
         )}
       </AnimatePresence>
 
-      
     </div>
   );
 }
