@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import JudgeMenu from "../components/JudgeMenu";
 
@@ -5,6 +6,10 @@ export const metadata: Metadata = {
   title: "PRAXIS — AI-Powered Assessment Platform",
   description:
     "PRAXIS is the next-generation immersive technical assessment environment. Experience AI-driven stakeholder roleplay, real-time behavioral telemetry, and cryptographically-verified performance credentials.",
+
+  verification: {
+    google: "NTFblBOVK3CbipuRckbv2-dKpDeTer2IUwCPasqTAdg",
+  },
 };
 
 export default function RootLayout({
